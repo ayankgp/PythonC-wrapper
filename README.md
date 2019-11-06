@@ -27,4 +27,4 @@ Give the example
 
 ## Authors
 
-* **Ayan Chattopadhyay** - *Initial work* - [Princeton University](https://github.com/ayankgp)
+* **Ayan Chattopadhyay** - *Graduate Student, Princeton University* - [My Github](https://github.com/ayankgp)
