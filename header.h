@@ -1,6 +1,6 @@
 #include "struct.h"
 
-void add_h(parameters* params)
+void multiply_h(parameters* params)
 {
     for(int i=0; i<params->N; i++)
     {
