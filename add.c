@@ -11,4 +11,5 @@ void add(parameters* params)
     {
         params->result[i] = params->numbers[i] * params->scale;
     }
+    printf("%ld %ld \n", params->numbers_int[0], params->numbers_int[1]);
 }

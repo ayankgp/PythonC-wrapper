@@ -1,7 +1,7 @@
 from wrapper import *
 import numpy as np
 from types import MethodType, FunctionType
-from ctypes import POINTER, c_double
+from ctypes import POINTER, c_double, c_int, c_long
 from function import func
 
 
@@ -13,10 +13,12 @@ class Calculate:
             else:
                 setattr(self, name, value)
         self.result = np.empty(2)
-        self.num = np.ascontiguousarray(self.num)
+        self.num = np.asarray(self.num)
+        self.num_int = np.asarray(self.num_int)
 
     def create_params(self, params):
         params.numbers = self.num.ctypes.data_as(POINTER(c_double))
+        params.numbers_int = self.num_int.ctypes.data_as(POINTER(c_long))
         params.N = len(self.num)
         params.scale = self.scale
         params.result = self.result.ctypes.data_as(POINTER(c_double))
@@ -31,6 +33,7 @@ if __name__ == "__main__":
 
     Data = dict(
         num=[2., 3.],
+        num_int=[5, 6],
         scale=2
     )
 

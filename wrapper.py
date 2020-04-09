@@ -1,6 +1,6 @@
 import os
 import ctypes
-from ctypes import c_int, c_double, POINTER, Structure
+from ctypes import c_int, c_long, c_double, POINTER, Structure
 
 __doc__ = """
 Python wrapper for add.c
@@ -19,6 +19,7 @@ class Parameters(Structure):
     _fields_ = [
 
         ('numbers', POINTER(c_double)),
+        ('numbers_int', POINTER(c_long)),
         ('N', c_int),
         ('scale', c_double),
         ('result', POINTER(c_double)),
